@@ -23,6 +23,7 @@ namespace SchoolBusSimulator.Views
         public Car()
         {
             InitializeComponent();
+            DataContext = this;
         }
     }
 }

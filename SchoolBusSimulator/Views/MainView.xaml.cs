@@ -22,7 +22,6 @@ namespace SchoolBusSimulator.Views
         public MainView()
         {
             InitializeComponent();
-            DataContext = this;
         }
 
         

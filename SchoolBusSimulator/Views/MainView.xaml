@@ -23,7 +23,6 @@
         <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}"></ContentControl>
         <StackPanel Grid.Column="1">
             <Image Source="/Images/welcome.jpg" />
-            <Label Content="Click Buttons For Contiune" HorizontalAlignment="Center" FontFamily="Comic Sans Ms" FontSize="45" Background="SteelBlue"></Label>
         </StackPanel>
     </Grid>
 </Window>
