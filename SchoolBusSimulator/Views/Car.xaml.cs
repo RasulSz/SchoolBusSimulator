@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,6 +26,19 @@ namespace SchoolBusSimulator.Views
         {
             InitializeComponent();
             DataContext = this;
+        }
+
+        private void ok_Click(object sender, RoutedEventArgs e)
+        {
+            SchoolBusSimulator.Models.SchoolBus schoolBus = new();
+            schoolBus.Brand=brand.Text;
+            schoolBus.SerialNumber = seria.Text;
+            schoolBus.RelaysDate = relay.Text;
+            schoolBus.SeatCount = seat.Text;
+            carcombo.Items.Add(schoolBus.Brand);
+            List<SchoolBusSimulator.Models.SchoolBus> schoolBuses = new();
+            var json=JsonSerializer.Serialize(carcombo.Items);
+            File.WriteAllText("cars.json", json);
         }
     }
 }

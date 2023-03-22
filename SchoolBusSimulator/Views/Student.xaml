@@ -17,7 +17,6 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <ComboBox Name="combo" Grid.ColumnSpan="2" Background="White" Height="55" VerticalAlignment="Top">
-
         </ComboBox>
         <StackPanel Grid.Row="1">
             <Label Content="Name : " HorizontalAlignment="Right" Margin="10"></Label>
@@ -33,6 +32,6 @@
             <TextBox x:Name="school" Width="200" HorizontalAlignment="Left" Margin="10,0"></TextBox>
             <TextBox x:Name="address" Width="200" HorizontalAlignment="Left" Margin="10"></TextBox>
         </StackPanel>
-        <Button Name="ok" Grid.Column="2" Grid.Row="2" Width="90" Height="45" HorizontalAlignment="Right" Margin="80,0" FontFamily="Comic Sans Ms" Content="Okay" FontSize="20"></Button>
+        <Button Name="ok" Grid.Column="2" Grid.Row="2" Width="90" Height="45" HorizontalAlignment="Right" Margin="80,0" FontFamily="Comic Sans Ms" Content="Okay" FontSize="20" Click="ok_Click"></Button>
     </Grid>
 </UserControl>
