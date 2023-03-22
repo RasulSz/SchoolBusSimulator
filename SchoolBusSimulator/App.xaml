@@ -1,0 +1,34 @@
+﻿<Application x:Class="SchoolBusSimulator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SchoolBusSimulator"
+             xmlns:ViewModels="clr-namespace:SchoolBusSimulator.ViewModels"
+             xmlns:Views="clr-namespace:SchoolBusSimulator.Views" xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <sys:Double x:Key="primaryHeight">40.0</sys:Double>
+            <FontFamily x:Key="fontFamily">Comic Sans Ms</FontFamily>
+            <DataTemplate DataType="{x:Type ViewModels:MainViewModel}">
+                <Views:MainView></Views:MainView>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:RideViewModel}">
+                <Views:Ride></Views:Ride>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:StudentViewModel}">
+                <Views:Student></Views:Student>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:DriverViewModel}">
+                <Views:Driver></Views:Driver>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:CarViewModel}">
+                <Views:Car></Views:Car>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

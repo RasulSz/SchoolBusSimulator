@@ -1,0 +1,29 @@
+﻿<Window x:Class="SchoolBusSimulator.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolBusSimulator.Views"
+        xmlns:viewModels="clr-namespace:SchoolBusSimulator.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel}"
+        mc:Ignorable="d"
+        Title="MainView" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Image Source="/Images/bus.png" Width="100" Height="100" Stretch="Fill" Margin="10"/>
+            <Button Height="{StaticResource primaryHeight}" FontFamily="{StaticResource fontFamily}" Content="Create Ride" Margin="10,10" Name="ride" Command="{Binding RideCommand}"></Button>
+            <Button Height="{StaticResource primaryHeight}" FontFamily="{StaticResource fontFamily}" Content="Student" Margin="10,20" Name="student" Command="{Binding StudentCommand}"></Button>
+            <Button Height="{StaticResource primaryHeight}" FontFamily="{StaticResource fontFamily}" Content="Driver" Margin="10,10" Name="driver" Command="{Binding DriverCommand}"></Button>
+            <Button Height="{StaticResource primaryHeight}" FontFamily="{StaticResource fontFamily}" Content="Car" Margin="10,20" Name="car" Command="{Binding CarCommand}"></Button>
+        </StackPanel>
+        <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}"></ContentControl>
+        <StackPanel Grid.Column="1">
+            <Image Source="/Images/welcome.jpg" />
+            <Label Content="Click Buttons For Contiune" HorizontalAlignment="Center" FontFamily="Comic Sans Ms" FontSize="45" Background="SteelBlue"></Label>
+        </StackPanel>
+    </Grid>
+</Window>
