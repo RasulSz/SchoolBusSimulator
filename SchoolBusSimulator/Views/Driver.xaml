@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800" Background="LightCyan" FontSize="20">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="12*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -16,21 +16,21 @@
             <RowDefinition Height="4*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <ComboBox Name="carcombo" Grid.ColumnSpan="2" Background="White" Height="55" VerticalAlignment="Top">
+        <ComboBox Name="combo" Grid.ColumnSpan="2" Background="White" Height="55" VerticalAlignment="Top">
 
         </ComboBox>
         <StackPanel Grid.Row="1">
-            <Label Content="Brand : " HorizontalAlignment="Right" Margin="10"></Label>
-            <Label Content="Relay Date : " HorizontalAlignment="Right"></Label>
-            <Label Content="Serial Number : " HorizontalAlignment="Right" Margin="10"></Label>
-            <Label Content="Seat Count : " HorizontalAlignment="Right"></Label>
+            <Label Content="Name : " HorizontalAlignment="Right" Margin="10"></Label>
+            <Label Content="Surname : " HorizontalAlignment="Right"></Label>
+            <Label Content="Age : " HorizontalAlignment="Right" Margin="10"></Label>
+            <Label Content="Address : " HorizontalAlignment="Right"></Label>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <TextBox x:Name="brand" Width="200" HorizontalAlignment="Left" Margin="10"></TextBox>
-            <TextBox x:Name="relay" Width="200" HorizontalAlignment="Left" Margin="10,0"></TextBox>
-            <TextBox x:Name="seria" Width="200" HorizontalAlignment="Left" Margin="10"></TextBox>
-            <TextBox x:Name="seat" Width="200" HorizontalAlignment="Left" Margin="10,0"></TextBox>
+            <TextBox x:Name="name" Width="200" HorizontalAlignment="Left" Margin="10"></TextBox>
+            <TextBox x:Name="surname" Width="200" HorizontalAlignment="Left" Margin="10,0"></TextBox>
+            <TextBox x:Name="age" Width="200" HorizontalAlignment="Left" Margin="10"></TextBox>
+            <TextBox x:Name="address" Width="200" HorizontalAlignment="Left" Margin="10,0"></TextBox>
         </StackPanel>
-        <Button Grid.Column="2" Grid.Row="2" Width="90" Height="45" HorizontalAlignment="Right" Margin="80,0" FontFamily="Comic Sans Ms" Content="Okay" FontSize="20"></Button>
+        <Button Name="ok" Grid.Column="2" Grid.Row="2" Width="90" Height="45" HorizontalAlignment="Right" Margin="80,0" FontFamily="Comic Sans Ms" Content="Okay" FontSize="20"></Button>
     </Grid>
 </UserControl>

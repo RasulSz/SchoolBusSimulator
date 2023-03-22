@@ -21,8 +21,8 @@
             <Button Height="{StaticResource primaryHeight}" FontFamily="{StaticResource fontFamily}" Content="Car" Margin="10,20" Name="car" Command="{Binding CarCommand}"></Button>
         </StackPanel>
         <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}"></ContentControl>
-        <StackPanel Grid.Column="1">
-            <Image Source="/Images/welcome.jpg" />
+        <StackPanel Grid.Column="1" Grid.RowSpan ="2" VerticalAlignment="Center">
+            <Image Source="/Images/welcome.jpg"/>
         </StackPanel>
     </Grid>
 </Window>
