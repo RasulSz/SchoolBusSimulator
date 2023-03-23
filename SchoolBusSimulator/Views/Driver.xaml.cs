@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -34,10 +36,9 @@ namespace SchoolBusSimulator.Views
             driver.Surname = surname.Text;
             driver.Adress = address.Text;
             driver.Age = age.Text;
-            SchoolBusSimulator.Views.Car car = new();
+            driver.Id++;
             combo.Items.Add(driver.Name);
-            var json = JsonSerializer.Serialize(combo.Items);
-            File.WriteAllText("drivers.json", json);
+            File.WriteAllText("drivers.json", JsonConvert.SerializeObject(driver));
         }
     }
 }

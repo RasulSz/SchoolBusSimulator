@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using SchoolBusSimulator.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,9 +36,9 @@ namespace SchoolBusSimulator.Views
             student.Surname = surname.Text;
             student.Adress = address.Text;
             student.SchoolNumber = school.Text;
+            student.Id++;
             combo.Items.Add(student.Name);
-            var json = JsonSerializer.Serialize(combo.Items);
-            File.WriteAllText("students.json", json);
+            File.WriteAllText("student.json", JsonConvert.SerializeObject(student));
         }
     }
 }

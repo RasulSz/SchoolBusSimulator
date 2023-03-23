@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using SchoolBusSimulator.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -35,10 +37,10 @@ namespace SchoolBusSimulator.Views
             schoolBus.SerialNumber = seria.Text;
             schoolBus.RelaysDate = relay.Text;
             schoolBus.SeatCount = seat.Text;
+            schoolBus.Id++;
             carcombo.Items.Add(schoolBus.Brand);
             List<SchoolBusSimulator.Models.SchoolBus> schoolBuses = new();
-            var json=JsonSerializer.Serialize(carcombo.Items);
-            File.WriteAllText("cars.json", json);
+            File.WriteAllText("cars.json", JsonConvert.SerializeObject(schoolBus));
         }
     }
 }
