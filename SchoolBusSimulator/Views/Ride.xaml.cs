@@ -27,30 +27,49 @@ namespace SchoolBusSimulator.Views
         
         private void stuinc_Click(object sender, RoutedEventArgs e)
         {
-            student.Text = "0";
-            int digit = Int32.Parse(student.Text);
+            int digit = int.Parse(student.Text);
+            digit--;
 
-            if (digit < 0)
+            if (digit < 1)
             {
-                student.Text = "30";
-                digit--;
+                digit = 30;
             }
-        }
-
-        private void guiinc_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void guidis_Click(object sender, RoutedEventArgs e)
-        {
-
+            student.Text = digit.ToString();
         }
 
         private void studis_Click(object sender, RoutedEventArgs e)
         {
-
+            int digit=int.Parse(student.Text);
+            digit++;
+            if (digit > 30)
+            {
+                digit = 1;
+            }
+            student.Text=digit.ToString();
         }
+
+        private void guiinc_Click(object sender, RoutedEventArgs e)
+        {
+            int digit = int.Parse(guide.Text);
+            digit++;
+            if (digit > 30)
+            {
+                digit = 1;
+            }
+            guide.Text = digit.ToString();
+        }
+
+        private void guidis_Click(object sender, RoutedEventArgs e)
+        {
+            int digit = int.Parse(guide.Text);
+            digit++;
+            if (digit > 30)
+            {
+                digit = 1;
+            }
+            guide.Text = digit.ToString();
+        }
+
 
         private void tour_Click(object sender, RoutedEventArgs e)
         {

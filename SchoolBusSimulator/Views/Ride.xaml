@@ -26,15 +26,15 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Grid.ColumnSpan="3" Content="Welcome To Bus! Set Passengers!" HorizontalContentAlignment="Center" FontSize="50" Foreground="Indigo"></Label>
+        <Label Grid.ColumnSpan="3" Content="Welcome To Bus! Set Passengers!" HorizontalContentAlignment="Center" FontSize="40" Foreground="Indigo"></Label>
         <Label Grid.Row="1" Grid.Column="1" Content="Student" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"></Label>
         <Button x:Name="stuinc" Click="stuinc_Click" Grid.Row="2" Content="-" FontSize="40" Height="70"></Button>
         <Label Grid.Row="3" Grid.Column="1" Content="Guides" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"></Label>
         <Button Click="guiinc_Click" x:Name="guiinc" Grid.Row="4" Content="-" FontSize="40" Height="70"></Button>
         <Button Click="guidis_Click" x:Name="guidis" Grid.Column="2" Grid.Row="4" Content="+"  FontSize="40" Height="70"></Button>
         <Button Click="studis_Click" x:Name="studis" Grid.Column="2" Grid.Row="2" Content="+" FontSize="40" Height="70"></Button>
-        <TextBlock x:Name="student" Grid.Row="2" Grid.Column="1"></TextBlock>
-        <TextBlock x:Name="guide" Grid.Column="1" Grid.Row="4"></TextBlock>
+        <TextBlock HorizontalAlignment="Center" x:Name="student" Grid.Row="2" Grid.Column="1" Text="1" VerticalAlignment="Center" FontSize="25"></TextBlock>
+        <TextBlock VerticalAlignment="Center" Text="1" FontSize="25" HorizontalAlignment="Center" x:Name="guide" Grid.Column="1" Grid.Row="4"></TextBlock>
         <Button Click="tour_Click" x:Name="tour" Content="Lets Go" Grid.Row="5" Grid.ColumnSpan="3" Width="150"></Button>
     </Grid>
 </UserControl>
