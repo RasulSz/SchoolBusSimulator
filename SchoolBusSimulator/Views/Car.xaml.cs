@@ -41,7 +41,6 @@ namespace SchoolBusSimulator.Views
             schoolBuses.Add(schoolBus);
             schoolBus.Id++;
             SchoolBusSimulator.FileHelper.FileHelper.WriteSchoolBus(schoolBuses);
-
         }
     }
 }

@@ -24,5 +24,37 @@ namespace SchoolBusSimulator.Views
         {
             InitializeComponent();
         }
+        
+        private void stuinc_Click(object sender, RoutedEventArgs e)
+        {
+            student.Text = "0";
+            int digit = Int32.Parse(student.Text);
+
+            if (digit < 0)
+            {
+                student.Text = "30";
+                digit--;
+            }
+        }
+
+        private void guiinc_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void guidis_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void studis_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void tour_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
