@@ -52,7 +52,7 @@ namespace SchoolBusSimulator.Views
         {
             int digit = int.Parse(guide.Text);
             digit++;
-            if (digit > 30)
+            if (digit > 4)
             {
                 digit = 1;
             }
@@ -73,7 +73,8 @@ namespace SchoolBusSimulator.Views
 
         private void tour_Click(object sender, RoutedEventArgs e)
         {
-
+            Simulation simulation = new();
+            simulation.ShowDialog();
         }
     }
 }
