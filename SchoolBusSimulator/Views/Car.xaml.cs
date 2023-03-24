@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SchoolBusSimulator.FileHelper;
 using SchoolBusSimulator.Models;
 using System;
 using System.Collections.Generic;
@@ -27,20 +28,20 @@ namespace SchoolBusSimulator.Views
         public Car()
         {
             InitializeComponent();
-            DataContext = this;
         }
+        List<SchoolBus> schoolBuses = new();
 
         private void ok_Click(object sender, RoutedEventArgs e)
         {
-            SchoolBusSimulator.Models.SchoolBus schoolBus = new();
+            SchoolBus schoolBus = new SchoolBus();
             schoolBus.Brand=brand.Text;
             schoolBus.SerialNumber = seria.Text;
             schoolBus.RelaysDate = relay.Text;
             schoolBus.SeatCount = seat.Text;
+            schoolBuses.Add(schoolBus);
             schoolBus.Id++;
-            carcombo.Items.Add(schoolBus.Brand);
-            List<SchoolBusSimulator.Models.SchoolBus> schoolBuses = new();
-            File.WriteAllText("cars.json", JsonConvert.SerializeObject(schoolBus));
+            SchoolBusSimulator.FileHelper.FileHelper.WriteSchoolBus(schoolBuses);
+
         }
     }
 }

@@ -28,17 +28,17 @@ namespace SchoolBusSimulator.Views
         {
             InitializeComponent();
         }
-
+        List<Studentm> students;
         private void ok_Click(object sender, RoutedEventArgs e)
         {
-            SchoolBusSimulator.Models.Student student = new();
+            SchoolBusSimulator.Models.Studentm student = new();
             student.Name = name.Text;
             student.Surname = surname.Text;
             student.Adress = address.Text;
             student.SchoolNumber = school.Text;
             student.Id++;
             combo.Items.Add(student.Name);
-            File.WriteAllText("student.json", JsonConvert.SerializeObject(student));
+            SchoolBusSimulator.FileHelper.FileHelper.WriteStudent(student);
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolBusSimulator.Models
 {
-    public class Student : Entity
+    public class Studentm : Entity
     {
         public string? Name { get; set; }
         public string? Surname { get; set; }

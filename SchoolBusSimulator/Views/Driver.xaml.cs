@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SchoolBusSimulator.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,17 +29,18 @@ namespace SchoolBusSimulator.Views
         {
             InitializeComponent();
         }
-
+        List<Driverm> drivers = new();
         private void ok_Click(object sender, RoutedEventArgs e)
         {
-            SchoolBusSimulator.Models.Driver driver = new();
+            Driverm driver = new();
             driver.Name = name.Text;
             driver.Surname = surname.Text;
             driver.Adress = address.Text;
             driver.Age = age.Text;
-            driver.Id++;
+            drivers.Add(driver);
             combo.Items.Add(driver.Name);
-            File.WriteAllText("drivers.json", JsonConvert.SerializeObject(driver));
+            driver.Id++;
+            SchoolBusSimulator.FileHelper.FileHelper.WriteDriver(drivers);
         }
     }
 }
