@@ -30,7 +30,7 @@ namespace SchoolBusSimulator.Views
             InitializeComponent();
         }
         List<SchoolBus> schoolBuses = new();
-
+        int[] integers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
         private void ok_Click(object sender, RoutedEventArgs e)
         {
             SchoolBus schoolBus = new SchoolBus();
@@ -41,6 +41,11 @@ namespace SchoolBusSimulator.Views
             schoolBuses.Add(schoolBus);
             schoolBus.Id++;
             SchoolBusSimulator.FileHelper.FileHelper.WriteSchoolBus(schoolBuses);
+
+            brand.Text = "";
+            seria.Text = "";
+            relay.Text = "";
+            seat.Text = "";
         }
     }
 }

@@ -39,6 +39,10 @@ namespace SchoolBusSimulator.Views
             student.Id++;
             combo.Items.Add(student.Name);
             SchoolBusSimulator.FileHelper.FileHelper.WriteStudent(student);
+            name.Text = "";
+            surname.Text = "";
+            address.Text = "";
+            school.Text = "";
 
         }
     }

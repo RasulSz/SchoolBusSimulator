@@ -41,6 +41,10 @@ namespace SchoolBusSimulator.Views
             combo.Items.Add(driver.Name);
             driver.Id++;
             SchoolBusSimulator.FileHelper.FileHelper.WriteDriver(drivers);
+            name.Text = "";
+            address.Text = "";
+            surname.Text = "";
+            age.Text = "";
         }
     }
 }
