@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,23 +30,30 @@ namespace SchoolBusSimulator.Views
         {
             InitializeComponent();
         }
+
         List<SchoolBus> schoolBuses = new();
-        int[] integers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
+        
         private void ok_Click(object sender, RoutedEventArgs e)
         {
             SchoolBus schoolBus = new SchoolBus();
             schoolBus.Brand=brand.Text;
             schoolBus.SerialNumber = seria.Text;
+            
             schoolBus.RelaysDate = relay.Text;
             schoolBus.SeatCount = seat.Text;
             schoolBuses.Add(schoolBus);
             schoolBus.Id++;
             SchoolBusSimulator.FileHelper.FileHelper.WriteSchoolBus(schoolBuses);
-
             brand.Text = "";
             seria.Text = "";
             relay.Text = "";
             seat.Text = "";
+        }
+
+        private void relay_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }
