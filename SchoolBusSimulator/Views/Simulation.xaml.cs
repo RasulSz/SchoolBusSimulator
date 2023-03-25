@@ -27,5 +27,10 @@ namespace SchoolBusSimulator.Views
             InitializeComponent();
             DataContext = this;
         }
+
+        private void start_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
