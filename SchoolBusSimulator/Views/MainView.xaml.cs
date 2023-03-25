@@ -23,7 +23,5 @@ namespace SchoolBusSimulator.Views
         {
             InitializeComponent();
         }
-
-        
     }
 }
