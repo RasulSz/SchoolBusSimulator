@@ -36,13 +36,15 @@ namespace SchoolBusSimulator.Views
             student.Name = name.Text;
             student.Surname = surname.Text;
             student.Adress = address.Text;
+            student.ParentName=pname.Text;
             student.SchoolNumber = school.Text;
             student.Id++;
-            combo.Items.Add(students);
+            combo.Items.Add(student.Name);
             SchoolBusSimulator.FileHelper.FileHelper.WriteStudent(student);
             name.Text = "";
             surname.Text = "";
             address.Text = "";
+            pname.Text = "";
             school.Text = "";
         }
         private void relay_PreviewTextInput(object sender, TextCompositionEventArgs e)

@@ -40,7 +40,7 @@ namespace SchoolBusSimulator.Views
             driver.Adress = address.Text;
             driver.Age = age.Text;
             drivers.Add(driver);
-            combo.Items.Add(drivers);
+            combo.Items.Add(driver.Name);
             driver.Id++;
             SchoolBusSimulator.FileHelper.FileHelper.WriteDriver(drivers);
             name.Text = "";

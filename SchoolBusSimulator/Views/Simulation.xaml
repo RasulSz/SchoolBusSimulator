@@ -3,10 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SchoolBusSimulator.Views"
+        xmlns:local="clr-namespace:SchoolBusSimulator.Views" xmlns:map="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         mc:Ignorable="d"
+        
         Title="Simulation" Height="450" Width="800">
     <Grid>
-          
+        <map:Map CredentialsProvider="{Binding ApiKey}" Center="40.4086174,49.8096519" ZoomLevel="16">
+            <map:Pushpin Location="40.408623, 49.808537"></map:Pushpin>
+        </map:Map>
     </Grid>
 </Window>

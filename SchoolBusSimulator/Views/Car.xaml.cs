@@ -43,7 +43,7 @@ namespace SchoolBusSimulator.Views
             schoolBus.SeatCount = seat.Text;
             schoolBuses.Add(schoolBus);
             schoolBus.Id++;
-            carcombo.Items.Add(schoolBuses);
+            carcombo.Items.Add(schoolBus.Brand);
             SchoolBusSimulator.FileHelper.FileHelper.WriteSchoolBus(schoolBuses);
             brand.Text = "";
             seria.Text = "";
