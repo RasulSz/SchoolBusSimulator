@@ -29,6 +29,7 @@
             <DataTemplate DataType="{x:Type ViewModels:CarViewModel}">
                 <Views:Car></Views:Car>
             </DataTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

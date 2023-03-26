@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -70,11 +71,10 @@ namespace SchoolBusSimulator.Views
             guide.Text = digit.ToString();
         }
 
-
-        private void tour_Click(object sender, RoutedEventArgs e)
+        private void go_Click(object sender, RoutedEventArgs e)
         {
-            Simulation simulation = new();
-            simulation.ShowDialog();
+            Map map = new();
+            map.ShowDialog();
         }
     }
 }

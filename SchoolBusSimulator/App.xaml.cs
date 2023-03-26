@@ -23,6 +23,7 @@ namespace SchoolBusSimulator
     public partial class App : Application
     {
         public static Container Container { get; set; }
+        public static Container Containerr { get; set; }
         protected override void OnStartup(StartupEventArgs e)
         {
             Register();
