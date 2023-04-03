@@ -52,19 +52,20 @@ namespace SchoolBusSimulator.Views
         private void guiinc_Click(object sender, RoutedEventArgs e)
         {
             int digit = int.Parse(guide.Text);
-            digit++;
-            if (digit > 4)
+            digit--;
+            if (digit < 1)
             {
-                digit = 1;
+                digit = 4;
             }
             guide.Text = digit.ToString();
+            
         }
 
         private void guidis_Click(object sender, RoutedEventArgs e)
         {
             int digit = int.Parse(guide.Text);
             digit++;
-            if (digit > 30)
+            if (digit > 4)
             {
                 digit = 1;
             }
