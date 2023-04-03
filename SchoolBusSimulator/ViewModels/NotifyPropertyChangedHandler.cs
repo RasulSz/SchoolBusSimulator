@@ -9,7 +9,7 @@ namespace SchoolBusSimulator.ViewModels
 {
     public class NotifyPropertyChangedHandler : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
         protected void NotifyPropertyChanged(string propertyname)
         {
             if(PropertyChanged != null)

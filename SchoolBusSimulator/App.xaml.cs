@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Container = SimpleInjector.Container;
 using INavigationService = SchoolBusSimulator.Service.INavigationService;
+using NavigationService = SchoolBusSimulator.Service.NavigationService;
 
 namespace SchoolBusSimulator
 {
@@ -22,8 +23,8 @@ namespace SchoolBusSimulator
     /// </summary>
     public partial class App : Application
     {
-        public static Container Container { get; set; }
-        public static Container Containerr { get; set; }
+        public static Container? Container { get; set; }
+        public static Container? Containerr { get; set; }
         protected override void OnStartup(StartupEventArgs e)
         {
             Register();
