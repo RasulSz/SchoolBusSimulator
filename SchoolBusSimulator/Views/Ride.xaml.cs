@@ -74,7 +74,8 @@ namespace SchoolBusSimulator.Views
 
         private void go_Click(object sender, RoutedEventArgs e)
         {
-
+            Map map = new();
+            map.ShowDialog();
         }
     }
 }

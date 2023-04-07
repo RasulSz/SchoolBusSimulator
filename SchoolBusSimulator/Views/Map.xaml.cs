@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Maps.MapControl.WPF;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +21,11 @@ namespace SchoolBusSimulator.Views
     /// </summary>
     public partial class Map : Window
     {
+        public ApplicationIdCredentialsProvider ApiKey { get; set; } = new(ConfigurationManager.AppSettings["apikey"]);
         public Map()
         {
             InitializeComponent();
+            DataContext = this;
         }
     }
 }
